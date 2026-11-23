@@ -1,0 +1,744 @@
+{
+ "network": "studionet (chain 61999, https://studio.genlayer.com/api)",
+ "steps": [
+  {
+   "step": "deploy",
+   "tx": "0xaed2965080766d29f4bfa9e73ebba71095945aa9f427c7a1f9817aa221a42a8f",
+   "sent_at": "2026-11-23T04:19:16Z",
+   "status": "ACCEPTED",
+   "result": "MAJORITY_AGREE",
+   "execution": "SUCCESS",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "error": null,
+   "latest": {
+    "status": "FINALIZED",
+    "result": "MAJORITY_AGREE",
+    "execution": "SUCCESS",
+    "votes": [
+     "agree",
+     "agree",
+     "agree",
+     "agree",
+     "idle"
+    ],
+    "error": null
+   }
+  },
+  {
+   "step": "register program #1 FTMO 2-Step (declared 5/10/10 %, 4 days)",
+   "tx": "0x29b83108d4de87d56043274b8bc78fb702287e0e620c3fdbe0aea0207168766c",
+   "sent_at": "2026-11-23T04:19:26Z",
+   "status": "ACCEPTED",
+   "result": "MAJORITY_AGREE",
+   "execution": "SUCCESS",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "error": null,
+   "latest": {
+    "status": "FINALIZED",
+    "result": "MAJORITY_AGREE",
+    "execution": "SUCCESS",
+    "votes": [
+     "agree",
+     "agree",
+     "agree",
+     "agree",
+     "agree"
+    ],
+    "error": null
+   }
+  },
+  {
+   "step": "register program #2 FTMO 2-Step, adversarial: declares 4 % daily loss",
+   "tx": "0xb5d0dc27096710ddf83cfc78750857f4401a032f6bebfb0eb5f369a83ae79c02",
+   "sent_at": "2026-11-23T04:19:35Z",
+   "status": "ACCEPTED",
+   "result": "MAJORITY_AGREE",
+   "execution": "SUCCESS",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "error": null,
+   "latest": {
+    "status": "FINALIZED",
+    "result": "MAJORITY_AGREE",
+    "execution": "SUCCESS",
+    "votes": [
+     "agree",
+     "agree",
+     "agree",
+     "agree",
+     "idle"
+    ],
+    "error": null
+   }
+  },
+  {
+   "step": "register program #3 FTMO 1-Step (3 % daily, 50 % consistency)",
+   "tx": "0x91a63c2bf2c523dbd4d8bf081e08a5935a131fd41552d0e48722a3ff4fdaf84d",
+   "sent_at": "2026-11-23T04:19:45Z",
+   "status": "ACCEPTED",
+   "result": "MAJORITY_AGREE",
+   "execution": "SUCCESS",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "error": null,
+   "latest": {
+    "status": "FINALIZED",
+    "result": "MAJORITY_AGREE",
+    "execution": "SUCCESS",
+    "votes": [
+     "agree",
+     "agree",
+     "agree",
+     "idle",
+     "idle"
+    ],
+    "error": null
+   }
+  },
+  {
+   "step": "verify_program #1 (consensus)",
+   "tx": "0xa30cd30c23937085e44e7d87f8905cb03e62b58a7f79e828d085458ed4fd1118",
+   "sent_at": "2026-11-23T04:19:52Z",
+   "status": "ACCEPTED",
+   "result": "MAJORITY_AGREE",
+   "execution": "SUCCESS",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "error": null,
+   "latest": {
+    "status": "FINALIZED",
+    "result": "MAJORITY_AGREE",
+    "execution": "SUCCESS",
+    "votes": [
+     "agree",
+     "agree",
+     "agree",
+     "idle",
+     "idle"
+    ],
+    "error": null
+   }
+  },
+  {
+   "step": "verify_program #2 (consensus)",
+   "tx": "0x3ffb601ab91e244e6e487e526a2f475d4bb3489c68d9ae7f2271ee0e0478acbd",
+   "sent_at": "2026-11-23T04:20:13Z",
+   "status": "ACCEPTED",
+   "result": "MAJORITY_AGREE",
+   "execution": "SUCCESS",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "error": null,
+   "latest": {
+    "status": "FINALIZED",
+    "result": "MAJORITY_AGREE",
+    "execution": "SUCCESS",
+    "votes": [
+     "agree",
+     "agree",
+     "agree",
+     "idle",
+     "idle"
+    ],
+    "error": null
+   }
+  },
+  {
+   "step": "verify_program #3 (consensus)",
+   "tx": "0x16d707660032885fd3e85449f6324211d3b707604cfb5e90bfb146bee3f0ca1d",
+   "sent_at": "2026-11-23T04:20:33Z",
+   "status": "ACCEPTED",
+   "result": "MAJORITY_AGREE",
+   "execution": "SUCCESS",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "error": null,
+   "latest": {
+    "status": "FINALIZED",
+    "result": "MAJORITY_AGREE",
+    "execution": "SUCCESS",
+    "votes": [
+     "agree",
+     "agree",
+     "agree",
+     "idle",
+     "idle"
+    ],
+    "error": null
+   }
+  },
+  {
+   "step": "open_account #1 on program #1 ($100k)",
+   "tx": "0x2f2be07d2a30d23e0b87a3a2c126491b4a955292fd2909ca7e04c0e7e9aa69f3",
+   "sent_at": "2026-11-23T04:20:54Z",
+   "status": "ACCEPTED",
+   "result": "MAJORITY_AGREE",
+   "execution": "SUCCESS",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "error": null,
+   "latest": {
+    "status": "FINALIZED",
+    "result": "MAJORITY_AGREE",
+    "execution": "SUCCESS",
+    "votes": [
+     "agree",
+     "agree",
+     "agree",
+     "agree",
+     "idle"
+    ],
+    "error": null
+   }
+  },
+  {
+   "step": "request_payout #1 (clean log)",
+   "tx": "0xdf33f50cd57ebf2cf569a59cca3d8de3986a256c00ea0bfdf03692b795337258",
+   "sent_at": "2026-11-23T04:21:08Z",
+   "status": "ACCEPTED",
+   "result": "MAJORITY_AGREE",
+   "execution": "SUCCESS",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "error": null,
+   "latest": {
+    "status": "FINALIZED",
+    "result": "MAJORITY_AGREE",
+    "execution": "SUCCESS",
+    "votes": [
+     "agree",
+     "agree",
+     "agree",
+     "agree",
+     "agree"
+    ],
+    "error": null
+   }
+  },
+  {
+   "step": "deny #1 citing rule:max_daily_loss_bp (false)",
+   "tx": "0x026b742470d6b83e2bd4e2c1ffff72fc0629acea1cd1d51153bccd1d4d9e8078",
+   "sent_at": "2026-11-23T04:21:23Z",
+   "status": "ACCEPTED",
+   "result": "MAJORITY_AGREE",
+   "execution": "SUCCESS",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "error": null,
+   "latest": {
+    "status": "FINALIZED",
+    "result": "MAJORITY_AGREE",
+    "execution": "SUCCESS",
+    "votes": [
+     "agree",
+     "agree",
+     "agree",
+     "idle",
+     "idle"
+    ],
+    "error": null
+   }
+  },
+  {
+   "step": "open_account #2 on program #3 ($100k)",
+   "tx": "0xec4fa3745b65f3f4d05226c7dfe9927eada4b7ee7ba4a0d2dfc7bd91983a046b",
+   "sent_at": "2026-11-23T04:21:32Z",
+   "status": "ACCEPTED",
+   "result": "MAJORITY_AGREE",
+   "execution": "SUCCESS",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "error": null,
+   "latest": {
+    "status": "FINALIZED",
+    "result": "MAJORITY_AGREE",
+    "execution": "SUCCESS",
+    "votes": [
+     "agree",
+     "agree",
+     "agree",
+     "agree",
+     "agree"
+    ],
+    "error": null
+   }
+  },
+  {
+   "step": "request_payout #2 (best day 70 % of profit)",
+   "tx": "0x835a0e2012f5778fcc05d0d80d888762ff51a1b811a019e75676d8305aee7197",
+   "sent_at": "2026-11-23T04:21:41Z",
+   "status": "ACCEPTED",
+   "result": "MAJORITY_AGREE",
+   "execution": "SUCCESS",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "error": null,
+   "latest": {
+    "status": "FINALIZED",
+    "result": "MAJORITY_AGREE",
+    "execution": "SUCCESS",
+    "votes": [
+     "agree",
+     "agree",
+     "agree",
+     "idle",
+     "idle"
+    ],
+    "error": null
+   }
+  },
+  {
+   "step": "withdraw (trader)",
+   "tx": "0x7dc25d8996fe4fc5cadd70cfa8bec97d517962cdf882cc7db67d8eecbd4387ac",
+   "sent_at": "2026-11-23T04:21:54Z",
+   "status": "ACCEPTED",
+   "result": "MAJORITY_AGREE",
+   "execution": "SUCCESS",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "error": null,
+   "latest": {
+    "status": "ACCEPTED",
+    "result": "MAJORITY_AGREE",
+    "execution": "SUCCESS",
+    "votes": [
+     "agree",
+     "agree",
+     "agree",
+     "agree",
+     "idle"
+    ],
+    "error": null
+   }
+  }
+ ],
+ "roles": {
+  "firm": "0xE7fd753cF1101BE80c43165FdA4b4c8E92FCA841",
+  "trader": "0x89730A91050EE853c6e7A6cD5385589548A6c603",
+  "trader2": "0x6661FBa5AeB4aEDB7E7316D5CC24B28DE178028e",
+  "trader3": "0xe8B2001a4390c0c8f96702591193BDf29d2A5581"
+ },
+ "funded_firm": true,
+ "funded_trader": true,
+ "funded_trader2": true,
+ "funded_trader3": true,
+ "contract": "0x2386859F2eF37A372f4e481c3a48D76a11e0156e",
+ "challenge_minutes": 3,
+ "explorer": "https://explorer-studio.genlayer.com/address/0x2386859F2eF37A372f4e481c3a48D76a11e0156e",
+ "programs": {
+  "1": {
+   "accounts": 1,
+   "balance": "2680000000000000000",
+   "clauses": [],
+   "created_at": "2026-11-23T04:19:25Z",
+   "day_offset_min": 60,
+   "demo_capital_usd": 0,
+   "encumbered": "0",
+   "firm": "0xE7fd753cF1101BE80c43165FdA4b4c8E92FCA841",
+   "free": "2680000000000000000",
+   "id": 1,
+   "name": "FTMO",
+   "paid": "320000000000000000",
+   "product": "2-Step",
+   "quotes": {
+    "max_daily_loss_bp": "the Maximum Daily Loss Amount , which is 5% of the Initial Simulated Capital",
+    "max_loss_bp": "the Maximum Loss Amount , which is 10% of the Initial Simulated Capital",
+    "min_trading_days": "The Minimum Trading Days rule requires the trader to achieve at least 4 Trading Days.",
+    "profit_target_bp": "10% for the FTMO Challenge"
+   },
+   "reading_notes": {
+    "_page": "25960 chars, model saw 14000 from offset 5695",
+    "consistency_bp": "not stated",
+    "max_daily_loss_bp": "ok",
+    "max_loss_bp": "ok",
+    "min_trading_days": "ok",
+    "profit_target_bp": "ok"
+   },
+   "review_minutes": 3,
+   "rules": {
+    "consistency_bp": 0,
+    "max_daily_loss_bp": 500,
+    "max_loss_bp": 1000,
+    "min_trading_days": 4,
+    "profit_target_bp": 1000
+   },
+   "rules_url": "https://ftmo.com/en/trading-objectives/",
+   "split_bp": 8000,
+   "status": "ACTIVE",
+   "verdict": {
+    "clauses": [],
+    "rules": {
+     "max_daily_loss_bp": "MATCH",
+     "max_loss_bp": "MATCH",
+     "min_trading_days": "MATCH",
+     "profit_target_bp": "MATCH"
+    },
+    "status": "ACTIVE"
+   },
+   "verified_at": "2026-11-23T04:19:52Z",
+   "wei_per_usd": "100000000000000"
+  },
+  "2": {
+   "accounts": 0,
+   "balance": "0",
+   "clauses": [],
+   "created_at": "2026-11-23T04:19:35Z",
+   "day_offset_min": 60,
+   "demo_capital_usd": 0,
+   "encumbered": "0",
+   "firm": "0xE7fd753cF1101BE80c43165FdA4b4c8E92FCA841",
+   "free": "0",
+   "id": 2,
+   "name": "FTMO",
+   "paid": "0",
+   "product": "2-Step",
+   "quotes": {
+    "max_daily_loss_bp": "Maximum Daily Loss Amount , which is 5% of the Initial Simulated Capital.",
+    "max_loss_bp": "Maximum Loss Amount , which is 10% of the Initial Simulated Capital.",
+    "min_trading_days": "The Minimum Trading Days rule requires the trader to achieve at least 4 Trading Days.",
+    "profit_target_bp": "10% for the FTMO Challenge 5% for the Verification This rule applies to both phases (FTMO Challenge and Verification) of the FTMO Challenge: 2-Step ."
+   },
+   "reading_notes": {
+    "_page": "25960 chars, model saw 14000 from offset 5695",
+    "consistency_bp": "not stated",
+    "max_daily_loss_bp": "ok",
+    "max_loss_bp": "ok",
+    "min_trading_days": "ok",
+    "profit_target_bp": "ok"
+   },
+   "review_minutes": 3,
+   "rules": {
+    "consistency_bp": 0,
+    "max_daily_loss_bp": 400,
+    "max_loss_bp": 1000,
+    "min_trading_days": 4,
+    "profit_target_bp": 1000
+   },
+   "rules_url": "https://ftmo.com/en/trading-objectives/",
+   "split_bp": 8000,
+   "status": "REJECTED",
+   "verdict": {
+    "clauses": [],
+    "rules": {
+     "max_daily_loss_bp": "MISMATCH",
+     "max_loss_bp": "MATCH",
+     "min_trading_days": "MATCH",
+     "profit_target_bp": "MATCH"
+    },
+    "status": "REJECTED"
+   },
+   "verified_at": "2026-11-23T04:20:12Z",
+   "wei_per_usd": "100000000000000"
+  },
+  "3": {
+   "accounts": 1,
+   "balance": "1000000000000000000",
+   "clauses": [],
+   "created_at": "2026-11-23T04:19:44Z",
+   "day_offset_min": 60,
+   "demo_capital_usd": 0,
+   "encumbered": "0",
+   "firm": "0xE7fd753cF1101BE80c43165FdA4b4c8E92FCA841",
+   "free": "1000000000000000000",
+   "id": 3,
+   "name": "FTMO",
+   "paid": "0",
+   "product": "1-Step",
+   "quotes": {
+    "consistency_bp": "To pass the FTMO Challenge: 1-Step or to be eligible for a Reward on an FTMO Account, the Consistency rule requires that your Best Day does not represent more than 50% of your total profit .",
+    "max_daily_loss_bp": "the Maximum Daily Loss Amount , which is 3% of the Initial Simulated Capital. On the first day, the account balance used for the limit calculation is the Initial Simulated Capital.",
+    "max_loss_bp": "and the Maximum Loss Amount , which is 10% of the Initial Simulated Capital.",
+    "profit_target_bp": "The Profit Target for the FTMO Challenge is calculated as 10% of the Initial Simulated Capital. This rule only applies to the FTMO Challenge: 1-Step ."
+   },
+   "reading_notes": {
+    "_page": "25960 chars, model saw 14000 from offset 7608",
+    "consistency_bp": "ok",
+    "max_daily_loss_bp": "ok",
+    "max_loss_bp": "ok",
+    "min_trading_days": "not stated",
+    "profit_target_bp": "ok"
+   },
+   "review_minutes": 3,
+   "rules": {
+    "consistency_bp": 5000,
+    "max_daily_loss_bp": 300,
+    "max_loss_bp": 1000,
+    "min_trading_days": 0,
+    "profit_target_bp": 1000
+   },
+   "rules_url": "https://ftmo.com/en/trading-objectives/",
+   "split_bp": 8000,
+   "status": "ACTIVE",
+   "verdict": {
+    "clauses": [],
+    "rules": {
+     "consistency_bp": "MATCH",
+     "max_daily_loss_bp": "MATCH",
+     "max_loss_bp": "MATCH",
+     "profit_target_bp": "MATCH"
+    },
+    "status": "ACTIVE"
+   },
+   "verified_at": "2026-11-23T04:20:32Z",
+   "wei_per_usd": "100000000000000"
+  }
+ },
+ "payouts": {
+  "1": {
+   "account_id": 1,
+   "amount": "320000000000000000",
+   "appeals": 0,
+   "capped": false,
+   "challenge_ends": "2026-11-23T04:24:23Z",
+   "closed_at": "2026-11-23T04:21:23Z",
+   "decided_at": "2026-11-23T04:21:23Z",
+   "facts": {
+    "hedged_overlaps": 0,
+    "longest_hold_hours": 3,
+    "max_lots_x100": 100,
+    "max_trades_in_one_day": 1,
+    "share_under_60s_bp": 0,
+    "shortest_hold_seconds": 3600,
+    "symbols": [
+     "EURUSD"
+    ],
+    "trades": 5,
+    "weekend_holds": 0
+   },
+   "filed_at": "2026-11-23T04:21:08Z",
+   "ground": "rule:max_daily_loss_bp",
+   "id": 1,
+   "label": "",
+   "reason": "Payout denied: the account breached the Maximum Daily Loss.",
+   "report": {
+    "best_day_cents": 150000,
+    "best_day_share_bp": 3750,
+    "breaches": [],
+    "capital_cents": 10000000,
+    "limits_cents": {
+     "max_daily_loss": 500000,
+     "max_loss": 1000000
+    },
+    "max_drawdown_cents": 0,
+    "net_profit_cents": 400000,
+    "target_reached": false,
+    "trades": 5,
+    "trading_days": 5,
+    "worst_day_cents": -80000
+   },
+   "review_ends": "2026-11-23T04:24:08Z",
+   "status": "PAID",
+   "trades": [
+    [
+     "2026-11-02T09:00:00Z",
+     "2026-11-02T11:00:00Z",
+     "EURUSD",
+     "buy",
+     100,
+     120000
+    ],
+    [
+     "2026-11-03T09:00:00Z",
+     "2026-11-03T12:00:00Z",
+     "EURUSD",
+     "buy",
+     100,
+     -80000
+    ],
+    [
+     "2026-11-04T10:00:00Z",
+     "2026-11-04T11:00:00Z",
+     "EURUSD",
+     "buy",
+     100,
+     150000
+    ],
+    [
+     "2026-11-05T09:00:00Z",
+     "2026-11-05T10:00:00Z",
+     "EURUSD",
+     "buy",
+     100,
+     60000
+    ],
+    [
+     "2026-11-06T13:00:00Z",
+     "2026-11-06T15:00:00Z",
+     "EURUSD",
+     "buy",
+     100,
+     150000
+    ]
+   ],
+   "trades_hash": "e2ef8a205e537603d4970aef6ad17e10d1d15f95c8d3f368f6987ec1d6c44adb",
+   "why": "denial overruled by code: max_daily_loss_bp was not breached"
+  },
+  "2": {
+   "account_id": 2,
+   "amount": "0",
+   "appeals": 0,
+   "capped": false,
+   "challenge_ends": "",
+   "closed_at": "2026-11-23T04:21:41Z",
+   "decided_at": "",
+   "facts": {
+    "hedged_overlaps": 0,
+    "longest_hold_hours": 1,
+    "max_lots_x100": 100,
+    "max_trades_in_one_day": 1,
+    "share_under_60s_bp": 0,
+    "shortest_hold_seconds": 3600,
+    "symbols": [
+     "EURUSD",
+     "XAUUSD"
+    ],
+    "trades": 3,
+    "weekend_holds": 0
+   },
+   "filed_at": "2026-11-23T04:21:41Z",
+   "ground": "",
+   "id": 2,
+   "label": "",
+   "reason": "",
+   "report": {
+    "best_day_cents": 700000,
+    "best_day_share_bp": 7000,
+    "breaches": [
+     "consistency_bp"
+    ],
+    "capital_cents": 10000000,
+    "limits_cents": {
+     "max_daily_loss": 300000,
+     "max_loss": 1000000
+    },
+    "max_drawdown_cents": 0,
+    "net_profit_cents": 1000000,
+    "target_reached": true,
+    "trades": 3,
+    "trading_days": 3,
+    "worst_day_cents": 100000
+   },
+   "review_ends": "",
+   "status": "BREACH",
+   "trades": [
+    [
+     "2026-11-09T09:00:00Z",
+     "2026-11-09T10:00:00Z",
+     "XAUUSD",
+     "buy",
+     100,
+     700000
+    ],
+    [
+     "2026-11-10T09:00:00Z",
+     "2026-11-10T10:00:00Z",
+     "EURUSD",
+     "buy",
+     100,
+     200000
+    ],
+    [
+     "2026-11-11T09:00:00Z",
+     "2026-11-11T10:00:00Z",
+     "EURUSD",
+     "buy",
+     100,
+     100000
+    ]
+   ],
+   "trades_hash": "527628ed20c874a1449a23236dd69aa3cdd97cd2ff1b21afb27ba0f67436b950",
+   "why": ""
+  }
+ },
+ "balance_before_withdraw_trader": "320000000000000000",
+ "balance_before_withdraw_trader3": "0",
+ "stats": {
+  "accounts": 2,
+  "challenge_minutes": 3,
+  "labels": [
+   "SUPPORTED",
+   "NOT_SUPPORTED"
+  ],
+  "max_appeals": 1,
+  "max_trades": 300,
+  "owner": "0xE7fd753cF1101BE80c43165FdA4b4c8E92FCA841",
+  "payouts": 2,
+  "programs": 3,
+  "rule_keys": [
+   "profit_target_bp",
+   "max_daily_loss_bp",
+   "max_loss_bp",
+   "min_trading_days",
+   "consistency_bp"
+  ],
+  "schema": "propcourt.v1"
+ },
+ "finished_at": "2026-11-23T04:22:18Z"
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PropCourt · prop-firm payouts judged by the firm's own published rules</title>
+<meta name="description" content="Prop-firm payout disputes on GenLayer: validators pin the rules from the firm's public page, code measures the trade log, consensus judges conduct clauses.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header>
+  <h1>Prop<span>Court</span></h1>
+  <p class="lede">Funded-trader firms write the rules and then decide alone whether you broke them. PropCourt pins the rules from the firm's own public page, measures your trade log with plain code, and lets GenLayer validators judge any conduct clause the firm cites. A denial the rules don't back pays out.</p>
+  <p class="net">GenLayer studionet (testnet) · test tokens only, no real money · contract <span id="addr"></span></p>
+  <p id="stats" class="muted">Reading the contract…</p>
+</header>
+<main>
+  <section>
+    <h2>Three decisions, taken out of the firm's hands</h2>
+    <div class="three">
+      <div class="card"><h3>1 · Which rules apply</h3><p>Every validator reads the firm's rules page and reports each number for <b>that product</b> with a verbatim quote. Code checks the quote is on its own copy of the page. Validators must agree on <b>MATCH / MISMATCH / NOT_STATED</b> for every rule. Then the program is frozen: accounts keep the rules they signed up under.</p></div>
+      <div class="card"><h3>2 · Whether a number was broken</h3><p>Plain code measures the closed-trade log: daily P&amp;L on the firm's trading-day clock, worst day, drawdown, best-day share, trading days. If the firm cites a numeric rule that code shows was <b>not</b> broken, the denial is overruled on the spot.</p></div>
+      <div class="card"><h3>3 · Whether a conduct clause was broken</h3><p>If the firm cites a pinned clause ("no hedging"), validators judge it from <b>facts computed by code</b> (hedged overlaps, weekend holds, hold times), never the raw log. The burden is on the firm. An unclear answer counts as <b>NOT_SUPPORTED</b>. The losing side gets one appeal.</p></div>
+    </div>
+  </section>
+  <section>
+    <h2>Programs and their pinned rules</h2>
+    <div id="programs" class="grid"></div>
+  </section>
+  <section>
+    <h2>Payout requests</h2>
+    <div class="scroll"><table>
+      <thead><tr><th>#</th><th>Account</th><th>Measured by code</th><th>Status</th><th>Firm's ground</th><th>Validators</th><th>Payout</th><th></th></tr></thead>
+      <tbody id="payouts"></tbody>
+    </table></div>
+  </section>
+  <section class="card">
+    <h2>Try it as a trader</h2>
+    <p class="muted">Uses a burner key kept in this browser (studionet only, funded by the free test faucet). The demo program is the <a href="demo-firm-rules.html">PropCourt Demo Firm</a>, a clearly labelled demo with conduct clauses, $100k demo accounts and a 3-minute review window. If the firm stays silent past the review window, anyone can finalize and the payout goes to you.</p>
+    <p>Your test key: <code id="me">none yet</code> <button id="wallet" type="button" class="ghost">Create / load test key</button></p>
+    <div class="row">
+      <label class="muted">Program <select id="prog"></select></label>
+      <button id="open" type="button">Open demo account</button>
+      <span class="muted">Your account: <b id="myacct">-</b></span>
+    </div>
+    <div class="row">
+      <span class="muted">Sample log:</span>
+      <button type="button" class="ghost" data-sample="clean">Clean ($100k, +$4,000)</button>
+      <button type="button" class="ghost" data-sample="hedged">Hedged</button>
+      <button type="button" class="ghost" data-sample="daily">Daily-loss breach</button>
+      <button type="button" class="ghost" data-sample="weekend">Held over weekend</button>
+    </div>
+    <textarea id="log_in" spellcheck="false" aria-label="Closed-trade log JSON">[]</textarea>
+    <p class="muted">Each trade: <code>[open UTC, close UTC, symbol, "buy"|"sell", lots×100, P&amp;L in cents]</code>, sorted by close time. Dates must be in the past.</p>
+    <div class="row">
+      <button id="preview" type="button" class="ghost">Preview (free, no transaction)</button>
+      <button id="request" type="button">Request payout</button>
+    </div>
+    <pre id="prev" class="rep"></pre>
+    <p>Your payout balance: <b id="bal" class="ok">-</b> <button id="withdraw" type="button" disabled>Withdraw</button></p>
+    <p id="log" class="log" role="status"></p>
+  </section>
+</main>
+<footer>
+  <p>Source, 109 tests and live evidence: <a href="https://github.com/yoyoblair333-wq/propcourt">github.com/yoyoblair333-wq/propcourt</a> · <a href="https://github.com/yoyoblair333-wq/propcourt/blob/main/docs/LIVE_EVIDENCE.md">live evidence</a> · MIT. FTMO is named only because PropCourt read its public rules page; PropCourt is not affiliated with any firm. Not financial or legal advice.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
