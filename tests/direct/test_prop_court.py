@@ -737,3 +737,12 @@ class TestHtml:
         page(direct_vm, body=html)
         rules_model(direct_vm)
         assert court.verify_program(pid)["verdict"]["rules"] == {"max_daily_loss_bp": "NOT_STATED"}
+
+
+class TestNumberInQuote:
+    def test_five_is_not_inside_fifty(self, court, direct_vm, direct_bob):
+        reply = dict(REPLY_2STEP, max_daily_loss_pct={"value": 5, "quote": "does not represent more than 50% of your total profit"})
+        pid = register(direct_vm, court, direct_bob)
+        page(direct_vm)
+        rules_model(direct_vm, reply)
+        assert court.verify_program(pid)["verdict"]["rules"]["max_daily_loss_bp"] == "NOT_STATED"

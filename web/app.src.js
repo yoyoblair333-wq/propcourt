@@ -3,7 +3,7 @@
 import { createClient, createAccount, generatePrivateKey } from "genlayer-js";
 import { studionet } from "genlayer-js/chains";
 
-export const CONTRACT = "0x2386859F2eF37A372f4e481c3a48D76a11e0156e";
+export const CONTRACT = "0x6Af674cF2196B7a9067380F74666C94352bFf485";
 const RPC = "https://studio.genlayer.com/api";
 const EXPLORER = "https://explorer-studio.genlayer.com";
 const KEY = "propcourt.studionet-burner.v1";

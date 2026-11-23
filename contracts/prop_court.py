@@ -451,14 +451,21 @@ def _num_to_units(v, key: str):
     return int(v)
 
 
-def _number_in_quote(units: int, key: str, quote_sq: str) -> bool:
-    """The stated number must literally appear in the (squashed) quote."""
-    if key in PCT_KEYS:
-        whole, frac = units // 100, units % 100
-        forms = [str(whole)] if frac == 0 else [f"{whole}{str(frac).rjust(2, '0').rstrip('0')}"]
-    else:
-        forms = [str(units)]
-    return any(f in quote_sq for f in forms)
+_NUM_RE = re.compile(r"(?<![\d.])(?<!\d,)\d+(?:[.,]\d+)?(?![\d]|[.,]\d)")
+
+
+def _number_in_quote(units: int, key: str, quote: str) -> bool:
+    """The stated number must be one of the whole numbers printed in the quote
+    (so 5 never matches inside 50, and 2.5 never matches inside 12.5)."""
+    for m in _NUM_RE.finditer(quote):
+        try:
+            x = float(m.group(0).replace(",", "."))
+        except Exception:
+            continue
+        v = int(round(x * 100)) if key in PCT_KEYS else (int(x) if x == int(x) else -1)
+        if v == units:
+            return True
+    return False
 
 
 def parse_rules_reply(raw, page_sq: str) -> tuple:
@@ -486,7 +493,7 @@ def parse_rules_reply(raw, page_sq: str) -> tuple:
             note = "ok"
             if len(qs) < 4 or qs not in page_sq:
                 note = f"dropped {units}: quote not on page: {q[:120]}"
-            elif not _number_in_quote(units, key, qs):
+            elif not _number_in_quote(units, key, q):
                 note = f"dropped {units}: number not in quote: {q[:120]}"
             if note != "ok":
                 units, q = None, ""
@@ -666,7 +673,7 @@ def read_rules(name: str, product: str, url: str, declared: dict, clauses: list,
     ctx = focus(text, product, CONTEXT_BUDGET)
     try:
         found, quotes, notes = parse_rules_reply(gl.nondet.exec_prompt(
-            build_rules_prompt(name, product, url, ctx, fence), response_format="json"), page_sq)
+            build_rules_prompt(name, product, url, ctx, fence)), page_sq)
     except Exception as e:
         found, quotes, notes = {k: None for k in RULE_KEYS}, {}, {"_reply": "unparseable: " + str(e)[:120]}
     rs = rule_status(declared, found)
@@ -758,7 +765,7 @@ class PropCourt(gl.Contract):
         prompt = build_conduct_prompt(clause, reason, facts, rules, fence)
 
         def leader_fn() -> dict:
-            lab, why = parse_label(gl.nondet.exec_prompt(prompt, response_format="json"))
+            lab, why = parse_label(gl.nondet.exec_prompt(prompt))
             return {"label": lab, "why": why}
 
         def validator_fn(leader_res) -> bool:
@@ -767,7 +774,7 @@ class PropCourt(gl.Contract):
             d = leader_res.calldata
             if not isinstance(d, dict) or set(d.keys()) != {"label", "why"} or d["label"] not in LABELS:
                 return False
-            mine, _ = parse_label(gl.nondet.exec_prompt(prompt, response_format="json"))
+            mine, _ = parse_label(gl.nondet.exec_prompt(prompt))
             return mine == d["label"]
 
         res = gl.vm.run_nondet_unsafe(leader_fn, validator_fn)
